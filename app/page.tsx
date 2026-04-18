@@ -40,72 +40,66 @@ export default function Home() {
           </h1>
           <p className="text-lg italic font-medium">Analyse, Inzicht en de Toekomst van Technologie</p>
         </div>
-        <nav className="flex flex-wrap justify-center gap-4 border-t border-[#1a1a1a] pt-6 font-sans text-xs font-bold uppercase tracking-wider">
-          <Link href="/" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">Home</Link>
-          <Link href="/ai-slop" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">De Opkomst van AI-Slop</Link>
-          <Link href="/amodei" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">Machines of Loving Grace</Link>
-          <Link href="/vibecoding" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">Het Tijdperk van Vibe Coding</Link>
-        </nav>
       </header>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto p-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-
-          {/* Main Feature */}
-          <section className="md:col-span-8 border-r border-gray-300 pr-8">
-            <Link href={artikels[0].link} className="group">
-              <div className="relative h-[400px] mb-6 overflow-hidden border border-gray-200">
-                <Image
-                  src={artikels[0].afbeelding}
-                  alt={artikels[0].titel}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <span className="text-red-700 font-sans font-bold uppercase text-xs tracking-widest">{artikels[0].categorie}</span>
-              <h2 className="text-4xl font-bold mt-2 mb-4 group-hover:underline underline-offset-4">
-                {artikels[0].titel}
-              </h2>
-              <p className="text-xl leading-relaxed text-gray-700">
-                {artikels[0].ondertitel}. Een diepe duik in hoe de wildgroei aan AI-content de structuur van onze digitale sociale ruimtes fundamenteel verandert en waarom we waakzaam moeten zijn voor de &apos;slop&apos; die ons bereikt.
-              </p>
-            </Link>
-          </section>
-
-          {/* Sidebar Features */}
-          <aside className="md:col-span-4 space-y-8">
-            {artikels.slice(1).map((art) => (
-              <Link href={art.link} key={art.id} className="block group border-b border-gray-300 pb-8 last:border-0">
-                <div className="relative h-48 mb-4 overflow-hidden border border-gray-200">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-[#1a1a1a]">
+          {artikels.map((art, index) => (
+            <Link
+              key={art.id}
+              href={art.link}
+              className={`group relative flex flex-col p-8 transition-all duration-300 hover:bg-[#1a1a1a] hover:text-[#f9f7f2] border-[#1a1a1a] ${
+                index !== artikels.length - 1 ? 'md:border-r border-b md:border-b-0' : ''
+              }`}
+            >
+              <div className="flex-grow">
+                <span className="text-red-700 font-sans font-bold uppercase text-xs tracking-widest group-hover:text-red-400">
+                  {art.categorie}
+                </span>
+                <h2 className="text-3xl font-bold mt-4 mb-6 leading-tight group-hover:italic transition-all">
+                  {art.titel}
+                </h2>
+                <div className="relative h-64 mb-6 overflow-hidden border border-[#1a1a1a]">
                   <Image
                     src={art.afbeelding}
                     alt={art.titel}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0"
                   />
                 </div>
-                <span className="text-red-700 font-sans font-bold uppercase text-xs tracking-widest">{art.categorie}</span>
-                <h3 className="text-2xl font-bold mt-2 mb-2 group-hover:underline underline-offset-2">
-                  {art.titel}
-                </h3>
-                <p className="text-gray-700 leading-snug">
-                  {art.ondertitel}. Ontdek de nieuwste perspectieven op deze technologische verschuiving.
+                <p className="text-lg leading-relaxed opacity-80 mb-8">
+                  {art.ondertitel}. Klik hier voor de volledige analyse van dit artikel.
                 </p>
-              </Link>
-            ))}
-          </aside>
+              </div>
+
+              <div className="mt-auto pt-6 border-t border-[#1a1a1a] group-hover:border-[#f9f7f2]">
+                <span className="inline-block px-6 py-3 border border-[#1a1a1a] group-hover:border-[#f9f7f2] font-sans font-bold uppercase text-xs tracking-widest">
+                  Lees Analyse &rarr;
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Bottom Banner */}
+        <div className="mt-12 border-t-2 border-[#1a1a1a] pt-8 grid grid-cols-1 md:grid-cols-2 gap-8 italic text-sm opacity-70">
+          <p>
+            Onze missie is het bieden van helderheid in een wereld die razendsnel wordt getransformeerd door kunstmatige intelligentie. We analyseren de trends die er werkelijk toe doen.
+          </p>
+          <p className="md:text-right">
+            Gepubliceerd door de Redactie van de AI Gazette. Geen downloads nodig, alleen pure analyse.
+          </p>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#1a1a1a] text-[#f9f7f2] mt-16 py-12 px-6">
+      <footer className="bg-[#1a1a1a] text-[#f9f7f2] mt-24 py-16 px-6 border-t-8 border-double border-[#f9f7f2]">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-serif italic mb-4">THE AI GAZETTE</h2>
-          <p className="font-sans text-sm tracking-widest opacity-70">© 2025 EDITORIAL ANALYSIS PROJECT</p>
+          <h2 className="text-4xl font-serif italic mb-6">THE AI GAZETTE</h2>
+          <div className="w-24 h-1 bg-red-700 mx-auto mb-8"></div>
+          <p className="font-sans text-sm tracking-widest opacity-70">© 2025 EDITORIAL ANALYSIS PROJECT | AMSTERDAM</p>
         </div>
       </footer>
     </div>
