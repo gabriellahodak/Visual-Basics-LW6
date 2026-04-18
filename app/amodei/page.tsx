@@ -28,6 +28,8 @@ export default function Amodei() {
               src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=800&auto=format&fit=crop"
               alt="Dario Amodei Vision"
               fill
+              priority
+              sizes="(max-width: 768px) 100vw, 800px"
               className="object-cover"
             />
           </div>

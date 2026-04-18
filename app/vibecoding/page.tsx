@@ -28,6 +28,8 @@ export default function Vibecoding() {
               src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
               alt="Vibe Coding Visual"
               fill
+              priority
+              sizes="(max-width: 768px) 100vw, 800px"
               className="object-cover"
             />
           </div>

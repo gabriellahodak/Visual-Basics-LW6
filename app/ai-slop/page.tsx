@@ -28,6 +28,8 @@ export default function AISlop() {
               src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?q=80&w=800&auto=format&fit=crop"
               alt="AI Slop Visual"
               fill
+              priority
+              sizes="(max-width: 768px) 100vw, 800px"
               className="object-cover"
             />
           </div>
