@@ -40,11 +40,11 @@ export default function Home() {
           </h1>
           <p className="text-lg italic font-medium">Analyse, Inzicht en de Toekomst van Technologie</p>
         </div>
-        <nav className="flex justify-center gap-8 border-t border-[#1a1a1a] pt-4 font-sans text-sm font-bold uppercase tracking-wider">
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/ai-slop" className="hover:underline">AI Slop</Link>
-          <Link href="/amodei" className="hover:underline">Amodei</Link>
-          <Link href="/vibecoding" className="hover:underline">Vibe Coding</Link>
+        <nav className="flex flex-wrap justify-center gap-4 border-t border-[#1a1a1a] pt-6 font-sans text-xs font-bold uppercase tracking-wider">
+          <Link href="/" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">Home</Link>
+          <Link href="/ai-slop" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">De Opkomst van AI-Slop</Link>
+          <Link href="/amodei" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">Machines of Loving Grace</Link>
+          <Link href="/vibecoding" className="px-4 py-2 border border-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-[#f9f7f2] transition-colors">Het Tijdperk van Vibe Coding</Link>
         </nav>
       </header>
 
