@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AISlop() {
   return (
-    <div className="min-h-screen bg-[#f9f7f2] text-[#1a1a1a] font-serif">
+    <div className="min-h-screen text-[#1a1a1a] font-serif">
       <header className="border-b border-[#1a1a1a] py-6 px-6 max-w-4xl mx-auto flex justify-between items-center">
         <Link href="/" className="font-serif italic text-2xl font-black">THE AI GAZETTE</Link>
         <nav className="font-sans text-xs font-bold uppercase tracking-widest">
@@ -34,7 +34,7 @@ export default function AISlop() {
             />
           </div>
 
-          <div className="prose prose-lg prose-gray max-w-none leading-relaxed space-y-8 text-xl">
+          <div className="prose prose-lg prose-stone max-w-none leading-relaxed space-y-8 text-xl font-serif">
             <p>
               In het huidige digitale landschap zien we een verontrustende trend: de opkomst van zogenaamde &quot;AI-slop&quot;. Dit zijn beelden, teksten en video&apos;s die met minimale menselijke tussenkomst door kunstmatige intelligentie worden geproduceerd, puur om aandacht en clicks te trekken op platforms zoals Facebook en Instagram.
             </p>

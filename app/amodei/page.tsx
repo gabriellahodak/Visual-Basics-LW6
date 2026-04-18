@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Amodei() {
   return (
-    <div className="min-h-screen bg-[#f9f7f2] text-[#1a1a1a] font-serif">
+    <div className="min-h-screen text-[#1a1a1a] font-serif">
       <header className="border-b border-[#1a1a1a] py-6 px-6 max-w-4xl mx-auto flex justify-between items-center">
         <Link href="/" className="font-serif italic text-2xl font-black">THE AI GAZETTE</Link>
         <nav className="font-sans text-xs font-bold uppercase tracking-widest">
@@ -34,7 +34,7 @@ export default function Amodei() {
             />
           </div>
 
-          <div className="prose prose-lg prose-gray max-w-none leading-relaxed space-y-8 text-xl">
+          <div className="prose prose-lg prose-stone max-w-none leading-relaxed space-y-8 text-xl font-serif">
             <p>
               Terwijl veel discussies over AI zich concentreren op existentiële risico&apos;s en doemscenario&apos;s, biedt Dario Amodei, CEO van Anthropic, een verfrissend en diepgaand optimistisch tegenwicht. In zijn essay &quot;Machines of Loving Grace&quot; schetst hij een toekomst waarin AI fungeert als een katalysator voor menselijke bloei.
             </p>

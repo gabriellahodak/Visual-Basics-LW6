@@ -30,7 +30,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f9f7f2] text-[#1a1a1a] font-serif">
+    <div className="min-h-screen text-[#1a1a1a] font-serif">
       {/* Masthead */}
       <header className="border-b-4 border-double border-[#1a1a1a] py-8 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-6">
